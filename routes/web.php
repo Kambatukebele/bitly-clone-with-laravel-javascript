@@ -25,17 +25,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 /**
  * Pages Controller
-    * 1. pages/resources
-    * 2. pages/trust
-    * 3. pages/app-connectors
-    * 4. pages/pricing
  */
 Route::controller(PagesController::class)->group(function (){
-    Route::get('resources', 'Resources')->name('resources');
-    Route::get('trust', 'Trust')->name('trust');
-    Route::get('app-connectors', 'AppConnectors')->name('app-connectors');
-    Route::get('pricing', 'Pricing')->name('pricing');
-})
+    Route::prefix('pages')->group(function () {
+        Route::get('/resources', 'resources')->name('resources');
+        Route::get('/trust', 'trust')->name('trust');
+        Route::get('/app-connectors', 'appConnectors')->name('app-connectors');
+        Route::get('/pricing', 'pricing')->name('pricing');
+        //why-bitly Group
+        Route::prefix('why-bitly')->group(function () {
+            Route::get('/bitly-101', 'bitly101')->name('bitly-101');
+            Route::get('/enterprise-class', 'enterpriseClass')->name('enterprise-class');
+            Route::get('/integrations-api', 'integrationsApi')->name('integrations-api');
+        });
+        //products Group
+        Route::prefix('products')->group(function () {
+            Route::get('/link-management', 'linkManagement')->name('link-management');
+            Route::get('/qr-codes', 'qrCodes')->name('qr-codes');
+            Route::get('/link-in-bio', 'linkInBio')->name('link-in-bio');
+        });
+        //Landing Group
+        Route::prefix('landing')->group(function () {
+            Route::get('/discover-enterprise', 'discoverEnterprise')->name('discover-enterprise');
+        });
+    });    
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
