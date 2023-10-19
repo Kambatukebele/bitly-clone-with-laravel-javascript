@@ -1,5 +1,6 @@
 ## Cloning Bitly website : 
 https://bitly.com/
+https://medium.com/@andreelm/make-url-shortener-with-laravel-4983511c7a9d
 ## add route{pages}
 1. pages/resources
 2. pages/trust

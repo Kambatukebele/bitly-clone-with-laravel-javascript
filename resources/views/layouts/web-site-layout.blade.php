@@ -17,20 +17,112 @@
     </head>
     <body>
         <header>
+            <!-- Visible Menu -->
             <nav>
                 <div>
-                    <a href="#"><img src="" alt="bitly-logo"></a>
+                    <a href="#">
+                        <img class="w-[100px]" src="{{ url('images/bitly_logo.svg') }}" alt="bitly-logo">
+                    </a>
                 </div>
                 <ul>
-                    <li><a href="#">Products</a></li>
+                    <li>
+                        <a href="#">Products</a>
+                        <!--Submenu-->
+                        <div class="hidden">
+                            <div>
+                                <a href="#">
+                                    <div><img src="#" alt=""></div>
+                                    <div>
+                                        <h5>Link Management</h5>
+                                        <h5>Customoze, Share, and track links</h5>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div><img src="#" alt=""></div>
+                                    <div>
+                                        <h5>QR Codes</h5>
+                                        <h5>Dynamic solutions to fit every business need</h5>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div><img src="#" alt=""></div>
+                                    <div>
+                                        <h5>Link-in-bio</h5>
+                                        <h5>Curate and track links for social media profiles</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--End Submenu-->
+                    </li>
                     <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
+                    <li>
+                        <a href="#">Resources</a>
+                        <!--Submenu-->
+                        <div class="hidden">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <div>
+                                            <h5>Developers</h5>
+                                            <h5>API documentation and resources</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <h5>App Connectors</h5>
+                                            <h5>Optmize Bitly with App Connectors</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <div>
+                                            <h5>Resource Library</h5>
+                                            <h5>Ebooks and webinars</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <h5>BLog</h5>
+                                            <h5>Tips, best practices and more</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <div>
+                                            <h5>Trust Center</h5>
+                                            <h5>Policies, resources and tools to keep you safe</h5>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <h5>Support</h5>
+                                            <h5>FAQs and help articles</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Submenu-->
+                    </li>
                 </ul>
-                <ul>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign up Free</a></li>
-                    <li><a href="#"><button type="button">Get a Quote</button></a></li>
+                <ul class="block w-full bg-blue-950 ">
+                    <li class="text-center text-base"><a class="text-white" href="#">Log in</a></li>
+                    <li class="text-center text-base"><a class="text-white" href="#">Sign up Free</a></li>
+                    <li class="text-center text-base"><a class="text-white" href="#"><button class="w-[280px] rounded-sm bg-blue-500" type="button">Get a Quote</button></a></li>
                 </ul>
+                <div>
+                    <!--Hamburger Menu Button-->
+                    <div>
+                        <img src="{{ url('/images/feather-icon-menu.svg') }}" alt="">
+                    </div>
+                    <!--Close Menu Button-->
+                    <div>
+                        <img src="{{ url('images/feather-icon-x.svg') }}" alt="">
+                    </div>
+                </div>
             </nav>
         </header>
         <main>
